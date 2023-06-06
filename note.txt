@@ -1,0 +1,220 @@
+import { useState } from 'react'
+import React from 'react'
+
+function Input() {
+    const [name, SetName] = useState("Welcome");
+
+
+    function handleChange(){
+
+        SetName('jayveer');
+    }
+  return (
+    <>
+    <form>
+        <h3>User Register</h3>
+        {name}
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" value={name} onChange={handleChange}/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password"/></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>Register</button></td>
+            </tr>
+        </table>
+    </form> 
+    </>
+    
+  )
+}
+
+export default Input
+
+
+
+
+
+
+import { useState } from 'react'
+import React from 'react'
+
+function Input() {
+    const [name, SetName] = useState("Welcome");
+
+
+    function handleChange(){
+
+        SetName('jayveer');
+    }
+
+    function handleSubmit(e){
+
+        e.preventDefault();
+
+        console.log(name)
+    }
+
+
+  return (
+    <>
+    <form>
+        <h3>User Register</h3>
+        {name}
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><input type="text"  onChange={handleChange}/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password"/></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onClick={handleSubmit}>Register</button></td>
+            </tr>
+        </table>
+    </form> 
+    </>
+    
+  )
+}
+
+export default Input
+
+
+
+
+import { useState } from 'react'
+import React from 'react'
+
+function Input() {
+    const [email, SetEmail] = useState("");
+    const [password, SetPassword] = useState("");
+    const [name, SetName] = useState("");
+    const [city, SetCity] = useState("");
+
+
+  
+
+    function handleSubmit(e){
+
+        e.preventDefault();
+
+        console.log(email + password + name + city )
+    }
+
+
+  return (
+    <>
+    <form>
+        <h3>User Register</h3>
+        
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><input type="text"  onChange={(e)=>SetEmail(e.target.value)}/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" onChange={(e)=>SetPassword(e.target.value)}/></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" onChange={(e)=>SetName(e.target.value)}/></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" onChange={(e)=>SetCity(e.target.value)} /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onClick={handleSubmit}>Register</button></td>
+            </tr>
+        </table>
+    </form> 
+    </>
+    
+  )
+}
+
+export default Input
+
+
+
+import { useState } from 'react'
+import React from 'react'
+
+function Input() {
+    const [name, SetName] = useState("Welcome");
+
+
+    function handleChange(e){
+
+        SetName(e.target.value);
+    }
+
+    function handleSubmit(e){
+
+        e.preventDefault();
+
+        console.log(name)
+    }
+
+
+  return (
+    <>
+    <form>
+        <h3>User Register</h3>
+        {name}
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><input type="text"  onChange={handleChange}/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password"/></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button onClick={handleSubmit}>Register</button></td>
+            </tr>
+        </table>
+    </form> 
+    </>
+    
+  )
+}
+
+export default Input
